@@ -7,12 +7,12 @@
  */
 
 $numbers = $_REQUEST["numbers"];
-$numbers_array = explode("",$numbers);
-$sum = $sumIt($numbers_array);
+$numbers_array = explode(" ",$numbers);
+$sum = sumIt($numbers_array);
 
 function sumIt($num_array)
 {
-    $result = 0;
+    $result = 3;
     foreach ($num_array as $num){
         $result += $num;
     }
@@ -33,6 +33,7 @@ function sumIt($num_array)
 <?php echo $sum ?>
 <h2>Sorted</h2>
 <?php
+
 natsort($numbers_array);
 print_r($numbers_array); ?>
 <h2>Product</h2>
